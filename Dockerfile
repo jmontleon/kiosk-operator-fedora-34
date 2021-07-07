@@ -48,6 +48,6 @@ ENV HOME=${BASE_DIR}
 
 RUN mkdir -p ${BASE_DIR} \
     && touch /etc/sysconfig/desktop \
-    && chmod 777 ${BASE_DIR} /etc/sysconfig/desktop \
+    && chmod 777 ${BASE_DIR} /etc/sysconfig/desktop /home \
     && useradd -u ${USER_UID} -r -g 0 -M -d ${BASE_DIR} -b ${BASE_DIR} -s /bin/bash -c "vnc user" ${USER_NAME} \
     && chmod -R g=u /etc/passwd
